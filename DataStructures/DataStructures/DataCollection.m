@@ -8,6 +8,15 @@
 
 @implementation DataCollectionTest
 
++ (void) dataCollectionAddRemoveTests: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection
+{
+    NSLog(@"%@", NSStringFromClass ([dataCollection class]));
+    [DataCollectionTest dataCollectionAddTest: dataCollection];
+    [DataCollectionTest dataCollectionRemoveAllTest: dataCollection];
+    [DataCollectionTest dataCollectionRemoveMiddleItem: dataCollection];
+    [DataCollectionTest dataCollectionContainsMiddleItem: dataCollection];
+}
+
 + (void) dataCollectionAddTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection
 {
     PerformanceTimer* performanceTimer = [PerformanceTimer startTimerWithName: @"Add 1,000,000 items"];
@@ -41,6 +50,22 @@
     PerformanceTimer *performanceTimer = [PerformanceTimer startTimerWithName: @"Remove middle item"];
     [dataCollection removeObject: @(500000)];
     [performanceTimer stop];
+    [dataCollection removeAllObjects];
+}
+
++ (void) dataCollectionContainsMiddleItem: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection
+{
+    for (int index = 0; index < 1000000; index++)
+    {
+        [dataCollection addObject: @(index)];
+    }
+
+    PerformanceTimer *performanceTimer = [PerformanceTimer startTimerWithName: @"Contains middle item"];
+    BOOL found = [dataCollection contains: @(500000)];
+    [performanceTimer stop];
+
+    if (!found)
+        NSLog(@"Error item not found in dataCollectionContainsMiddleItem test");
     [dataCollection removeAllObjects];
 }
 
