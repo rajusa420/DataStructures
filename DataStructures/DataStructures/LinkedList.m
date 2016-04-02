@@ -28,6 +28,8 @@
     [self removeAllObjects];
 }
 
+@synthesize count = count_;
+
 - (void) addObject: (id) object
 {
     LinkedListNode* newNode = [[LinkedListNode alloc] init];
@@ -39,6 +41,8 @@
 
     if (!head_)
         head_ = newNode;
+
+    count_++;
 }
 
 - (id) removeFirstObject
@@ -51,6 +55,7 @@
         tail_ = nil;
     head_ = head_.next;
 
+    count_--;
     return node;
 }
 
@@ -64,6 +69,7 @@
     {
         head_ = nil;
         tail_ = nil;
+        count_--;
         return current;
     }
 
@@ -74,6 +80,7 @@
             LinkedListNode* lastNode = current.next;
             current.next = nil;
             tail_ = current;
+            count_--;
             return lastNode;
         }
         current = current.next;
@@ -102,6 +109,7 @@
             if (previous)
                 previous.next = current.next;
 
+            count_--;
             return current;
         }
 
@@ -128,6 +136,7 @@
 
     head_ = nil;
     tail_ = nil;
+    count_ = 0;
 }
 
 - (BOOL) contains: (id) object
@@ -145,6 +154,40 @@
     }
 
     return NO;
+}
+
+- (id) getFirstObject
+{
+    if (head_)
+        return head_.data;
+
+    return nil;
+}
+
+- (id) getLastObject
+{
+    if (tail_)
+        return tail_.data;
+
+    return nil;
+}
+
+- (id) getObjectAtIndex: (NSUInteger) index
+{
+    if (!head_)
+        return nil;
+
+    LinkedListNode* current = head_;
+    NSUInteger position = 0;
+    while (current != nil)
+    {
+        if (position == index)
+            return current.data;
+
+        position++;
+        current = current.next;
+    }
+    return nil;
 }
 
 - (void) printAllObjectsWithDataType: (Class) dataType

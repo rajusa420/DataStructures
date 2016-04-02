@@ -13,6 +13,10 @@
 - (id)removeLastObject;
 - (void)removeAllObjects;
 - (BOOL)contains: (id) object;
+- (NSUInteger) count;
+- (id)getFirstObject;
+- (id)getLastObject;
+- (id)getObjectAtIndex: (NSUInteger) index;
 @end
 
 @protocol DataCollectionDebug <NSObject>
@@ -25,5 +29,6 @@
 + (void)dataCollectionRemoveAllTest: (NSObject <DataCollection, DataCollectionDebug> *) dataCollection;
 + (void)dataCollectionRemoveMiddleItem: (NSObject <DataCollection, DataCollectionDebug> *) dataCollection;
 + (void) dataCollectionContainsMiddleItem: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection;
++ (void) dataCollectionReturnObjectTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection;
 + (void)basicDataCollectionTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection;
 @end

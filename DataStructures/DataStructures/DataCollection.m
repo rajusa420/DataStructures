@@ -35,7 +35,7 @@
         [dataCollection addObject: @(index)];
     }
 
-    PerformanceTimer *performanceTimer = [PerformanceTimer startTimerWithName: @"Remove all 1,000,000 items"];
+    PerformanceTimer* performanceTimer = [PerformanceTimer startTimerWithName: @"Remove all 1,000,000 items"];
     [dataCollection removeAllObjects];
     [performanceTimer stop];
 }
@@ -47,7 +47,7 @@
         [dataCollection addObject: @(index)];
     }
 
-    PerformanceTimer *performanceTimer = [PerformanceTimer startTimerWithName: @"Remove middle item"];
+    PerformanceTimer* performanceTimer = [PerformanceTimer startTimerWithName: @"Remove middle item"];
     [dataCollection removeObject: @(500000)];
     [performanceTimer stop];
     [dataCollection removeAllObjects];
@@ -60,7 +60,7 @@
         [dataCollection addObject: @(index)];
     }
 
-    PerformanceTimer *performanceTimer = [PerformanceTimer startTimerWithName: @"Contains middle item"];
+    PerformanceTimer* performanceTimer = [PerformanceTimer startTimerWithName: @"Contains middle item"];
     BOOL found = [dataCollection contains: @(500000)];
     [performanceTimer stop];
 
@@ -69,6 +69,20 @@
     [dataCollection removeAllObjects];
 }
 
++ (void) dataCollectionReturnObjectTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection
+{
+    for (int index = 0; index < 1000000; index++)
+    {
+        [dataCollection addObject: @(index)];
+    }
+
+    PerformanceTimer* performanceTimer = [PerformanceTimer startTimerWithName: @"Get middle item"];
+    id object = [dataCollection getObjectAtIndex: 500000];
+    [performanceTimer stop];
+
+    if ([object intValue] != 500000)
+        NSLog(@"Failed to get correct object in dataCollectionReturnObjectTest");
+}
 
 + (void)basicDataCollectionTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection
 {

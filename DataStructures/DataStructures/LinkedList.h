@@ -22,6 +22,7 @@
 @protected
     LinkedListNode* head_;
     LinkedListNode* tail_;
+    NSUInteger count_;
 }
 - (instancetype)init;
 
@@ -31,6 +32,10 @@
 - (id)removeLastObject;
 - (void)removeAllObjects;
 - (BOOL)contains: (id) object;
+- (id)getFirstObject;
+- (id)getLastObject;
 
 - (void)printAllObjectsWithDataType: (Class) dataType;
+
+@property (atomic, assign) NSUInteger count;
 @end

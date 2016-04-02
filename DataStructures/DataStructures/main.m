@@ -15,6 +15,7 @@ int main(int argc, const char * argv[])
     {
         LinkedList* linkedList = [[LinkedList alloc] init];
         [DataCollectionTest dataCollectionAddRemoveTests: linkedList];
+        [DataCollectionTest dataCollectionReturnObjectTest: linkedList];
         // [DataCollectionTest basicDataCollectionTest: linkedList];
     }
 
