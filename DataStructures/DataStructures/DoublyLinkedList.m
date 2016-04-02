@@ -1,16 +1,18 @@
 //
-// Created by Raj on 4/1/16.
+// Created by Raj on 4/2/16.
 // Copyright (c) 2016 Rajusa. All rights reserved.
 //
 
-#import "LinkedList.h"
+#import "DoublyLinkedList.h"
 
-@implementation LinkedListNode
+@implementation DoublyLinkedListNode
 @synthesize data = data_;
 @synthesize next = next_;
+@synthesize previous = previous_;
 @end
 
-@implementation LinkedList
+@implementation DoublyLinkedList
+
 
 - (instancetype) init
 {
@@ -32,11 +34,15 @@
 
 - (void) addObject: (id) object
 {
-    LinkedListNode* newNode = [[LinkedListNode alloc] init];
+    DoublyLinkedListNode* newNode = [[DoublyLinkedListNode alloc] init];
     newNode.data = object;
 
     if (tail_)
+    {
         tail_.next = newNode;
+        newNode.previous = tail_;
+    }
+
     tail_ = newNode;
 
     if (!head_)
@@ -50,10 +56,14 @@
     if (!head_)
         return nil;
 
-    LinkedListNode* node = head_;
+    DoublyLinkedListNode* node = head_;
     if (tail_ == head_)
         tail_ = nil;
+
     head_ = head_.next;
+
+    if (head_)
+        head_.previous = nil;
 
     count_--;
     return node.data;
@@ -64,29 +74,21 @@
     if (!head_)
         return nil;
 
-    LinkedListNode* current = head_;
-    if (current == tail_)
+    DoublyLinkedListNode* removedNode = tail_;
+    DoublyLinkedListNode* newTail = tail_.previous;
+    if (newTail)
+    {
+        newTail.next = nil;
+        tail_ = newTail;
+    }
+    else
     {
         head_ = nil;
         tail_ = nil;
-        count_--;
-        return current.data;
     }
 
-    while (current != nil)
-    {
-        if (current.next == tail_)
-        {
-            LinkedListNode* lastNode = current.next;
-            current.next = nil;
-            tail_ = current;
-            count_--;
-            return lastNode.data;
-        }
-        current = current.next;
-    }
-
-    return nil;
+    count_--;
+    return removedNode.data;
 }
 
 - (id) removeObject: (id) object
@@ -94,17 +96,23 @@
     if (!head_)
         return nil;
 
-    LinkedListNode* previous = nil;
-    LinkedListNode* current = head_;
+    DoublyLinkedListNode* current = head_;
     while (current != nil)
     {
         if (current.data == object)
         {
+            DoublyLinkedListNode* previous = current.previous;
             if (head_ == current)
+            {
                 head_ = current.next;
+                if (head_)
+                    head_.previous = nil;
+            }
 
             if (tail_ == current)
+            {
                 tail_ = previous;
+            }
 
             if (previous)
                 previous.next = current.next;
@@ -113,7 +121,6 @@
             return current.data;
         }
 
-        previous = current;
         current = current.next;
     }
 
@@ -125,12 +132,13 @@
     if (!head_)
         return;
 
-    LinkedListNode* current = head_;
+    DoublyLinkedListNode* current = head_;
     while (current != nil)
     {
-        LinkedListNode* next = current.next;
+        DoublyLinkedListNode* next = current.next;
         current.data = nil;
         current.next = nil;
+        current.previous = nil;
         current = next;
     }
 
@@ -144,7 +152,7 @@
     if (!head_)
         return NO;
 
-    LinkedListNode* current = head_;
+    DoublyLinkedListNode* current = head_;
     while (current != nil)
     {
         if (current.data == object)
@@ -177,7 +185,7 @@
     if (!head_)
         return nil;
 
-    LinkedListNode* current = head_;
+    DoublyLinkedListNode* current = head_;
     NSUInteger position = 0;
     while (current != nil)
     {
@@ -195,7 +203,7 @@
     if (!head_)
         return;
 
-    LinkedListNode* current = head_;
+    DoublyLinkedListNode* current = head_;
     while (current != nil)
     {
         if ([NSNumber class] == dataType)

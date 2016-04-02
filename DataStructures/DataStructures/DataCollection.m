@@ -82,6 +82,8 @@
 
     if ([object intValue] != 500000)
         NSLog(@"Failed to get correct object in dataCollectionReturnObjectTest");
+
+    [dataCollection removeAllObjects];
 }
 
 + (void)basicDataCollectionTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection

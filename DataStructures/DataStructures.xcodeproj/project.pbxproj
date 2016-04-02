@@ -11,6 +11,7 @@
 		C81151FE917CEC35A0991300 /* LIFOCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C81154D4CD6E688211FA9186 /* LIFOCollection.m */; };
 		C811536A609111A682C3BEA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C811550A3FC52E5334633AA7 /* main.m */; };
 		C8115CDD9EB072D1E8DF1D38 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115E49A2737DF7F6BBB094 /* Stack.m */; };
+		C8115D49D7FD37407F600E4A /* DoublyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115447037184E64FF70D87 /* DoublyLinkedList.m */; };
 		C8115FE17199FEB181E41190 /* DataCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115F6B7BFDE258A82FCF6A /* DataCollection.m */; };
 		C8115FEE713EE4D42F0EB1A3 /* PerformanceTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C8115447037184E64FF70D87 /* DoublyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublyLinkedList.m; sourceTree = "<group>"; };
 		C81154B68BB5168BD0B0EE1D /* PerformanceTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceTimer.h; sourceTree = "<group>"; };
 		C81154D4CD6E688211FA9186 /* LIFOCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFOCollection.m; sourceTree = "<group>"; };
 		C811550A3FC52E5334633AA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 		C8115AF9B921FEFAF35C2B34 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		C8115BADC006FA42AA2BE0B3 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		C8115BD494631A6879EFE7F5 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		C8115C21DE120449DEEC0930 /* DoublyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublyLinkedList.h; sourceTree = "<group>"; };
 		C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceTimer.m; sourceTree = "<group>"; };
 		C8115E49A2737DF7F6BBB094 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		C8115F6B7BFDE258A82FCF6A /* DataCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCollection.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				C8115BADC006FA42AA2BE0B3 /* Stack.h */,
 				C8115931BFD5FAFE57205C0F /* LIFOCollection.h */,
 				C81154D4CD6E688211FA9186 /* LIFOCollection.m */,
+				C8115447037184E64FF70D87 /* DoublyLinkedList.m */,
+				C8115C21DE120449DEEC0930 /* DoublyLinkedList.h */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				C8115FEE713EE4D42F0EB1A3 /* PerformanceTimer.m in Sources */,
 				C8115CDD9EB072D1E8DF1D38 /* Stack.m in Sources */,
 				C81151FE917CEC35A0991300 /* LIFOCollection.m in Sources */,
+				C8115D49D7FD37407F600E4A /* DoublyLinkedList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
