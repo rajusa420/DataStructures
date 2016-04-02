@@ -10,6 +10,7 @@
 #import "LinkedList.h"
 #import "Stack.h"
 #import "DoublyLinkedList.h"
+#import "Queue.h"
 
 int main(int argc, const char * argv[])
 {
@@ -17,12 +18,15 @@ int main(int argc, const char * argv[])
     {
         LinkedList* linkedList = [[LinkedList alloc] init];
         DoublyLinkedList* doublyLinkedList = [[DoublyLinkedList alloc] init];
-        [DataCollectionTest dataCollectionAddRemoveTests: doublyLinkedList];
-        [DataCollectionTest dataCollectionReturnObjectTest: doublyLinkedList];
+        // [DataCollectionTest dataCollectionAddRemoveTests: doublyLinkedList];
+        // [DataCollectionTest dataCollectionReturnObjectTest: doublyLinkedList];
         // [DataCollectionTest basicDataCollectionTest: doublyLinkedList];
 
         Stack* stack = [[Stack alloc] initWithCollection: doublyLinkedList];
         [LIFOCollectionTests LIFOCollectionPushPopTest: stack];
+
+        Queue* queue = [[Queue alloc] initWithCollection: linkedList];
+        [FIFOCollectionTests FIFOCollectionPushPopTest: queue];
     }
 
     return 0;

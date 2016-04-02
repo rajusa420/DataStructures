@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/DataCollection.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/DoublyLinkedList.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/DoublyLinkedList.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/FIFOCollection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/FIFOCollection.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/LIFOCollection.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/LIFOCollection.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/LinkedList.h" isTestSource="false" />
@@ -13,6 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/PerformanceTimer.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/PerformanceTimer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/Queue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/Queue.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/Stack.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/Stack.m" isTestSource="false" />
     </content>
