@@ -14,7 +14,10 @@ int main(int argc, const char * argv[])
     @autoreleasepool
     {
         LinkedList* linkedList = [[LinkedList alloc] init];
-        [DataCollectionTest basicDataCollectionTest: linkedList];
+        [DataCollectionTest dataCollectionAddTest: linkedList];
+        [DataCollectionTest dataCollectionRemoveAllTest: linkedList];
+        [DataCollectionTest dataCollectionRemoveMiddleItem: linkedList];
+        // [DataCollectionTest basicDataCollectionTest: linkedList];
     }
 
     return 0;

@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/LinkedList.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/LinkedList.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructures/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/PerformanceTimer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataStructures/PerformanceTimer.m" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

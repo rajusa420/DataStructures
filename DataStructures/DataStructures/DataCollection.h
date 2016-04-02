@@ -20,5 +20,8 @@
 @end
 
 @interface DataCollectionTest : NSObject
++ (void) dataCollectionAddTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection;
++ (void)dataCollectionRemoveAllTest: (NSObject <DataCollection, DataCollectionDebug> *) dataCollection;
++ (void)dataCollectionRemoveMiddleItem: (NSObject <DataCollection, DataCollectionDebug> *) dataCollection;
 + (void)basicDataCollectionTest: (NSObject<DataCollection, DataCollectionDebug>*) dataCollection;
 @end

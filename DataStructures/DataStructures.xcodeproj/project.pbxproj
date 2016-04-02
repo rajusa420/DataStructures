@@ -10,6 +10,7 @@
 		C81150369375DB8AC8050168 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115BD494631A6879EFE7F5 /* LinkedList.m */; };
 		C811536A609111A682C3BEA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C811550A3FC52E5334633AA7 /* main.m */; };
 		C8115FE17199FEB181E41190 /* DataCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115F6B7BFDE258A82FCF6A /* DataCollection.m */; };
+		C8115FEE713EE4D42F0EB1A3 /* PerformanceTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,11 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C81154B68BB5168BD0B0EE1D /* PerformanceTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceTimer.h; sourceTree = "<group>"; };
 		C811550A3FC52E5334633AA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8115583DB1878EFE3BE45D1 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8115858374D5FF91C05EB96 /* DataCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCollection.h; sourceTree = "<group>"; };
 		C8115AF9B921FEFAF35C2B34 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		C8115BD494631A6879EFE7F5 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceTimer.m; sourceTree = "<group>"; };
 		C8115F6B7BFDE258A82FCF6A /* DataCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +55,8 @@
 				C8115AF9B921FEFAF35C2B34 /* LinkedList.h */,
 				C8115858374D5FF91C05EB96 /* DataCollection.h */,
 				C8115F6B7BFDE258A82FCF6A /* DataCollection.m */,
+				C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */,
+				C81154B68BB5168BD0B0EE1D /* PerformanceTimer.h */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				C811536A609111A682C3BEA0 /* main.m in Sources */,
 				C81150369375DB8AC8050168 /* LinkedList.m in Sources */,
 				C8115FE17199FEB181E41190 /* DataCollection.m in Sources */,
+				C8115FEE713EE4D42F0EB1A3 /* PerformanceTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
