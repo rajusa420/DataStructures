@@ -11,6 +11,8 @@
 		C81151FE917CEC35A0991300 /* LIFOCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C81154D4CD6E688211FA9186 /* LIFOCollection.m */; };
 		C811536A609111A682C3BEA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C811550A3FC52E5334633AA7 /* main.m */; };
 		C81154E1883115F4BDCFE8AB /* FIFOCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115AD0C209826FBE122AFD /* FIFOCollection.m */; };
+		C81158A9B282D6249597C378 /* TreeCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C81152E45327B02D452FACA5 /* TreeCollection.m */; };
+		C8115A6471D8684259A66AFE /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = C81151E8F402DF262D5DC126 /* BinaryTree.m */; };
 		C8115CDD9EB072D1E8DF1D38 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115E49A2737DF7F6BBB094 /* Stack.m */; };
 		C8115D49D7FD37407F600E4A /* DoublyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115447037184E64FF70D87 /* DoublyLinkedList.m */; };
 		C8115F18CF03088D9D5D2E81 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C81155A28EAA4D4AB7BB7D00 /* Queue.m */; };
@@ -31,7 +33,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C81151E8F402DF262D5DC126 /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		C81152872FDBC2AF62EDDF2B /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		C81152E45327B02D452FACA5 /* TreeCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeCollection.m; sourceTree = "<group>"; };
 		C8115447037184E64FF70D87 /* DoublyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublyLinkedList.m; sourceTree = "<group>"; };
 		C81154B68BB5168BD0B0EE1D /* PerformanceTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceTimer.h; sourceTree = "<group>"; };
 		C81154D4CD6E688211FA9186 /* LIFOCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFOCollection.m; sourceTree = "<group>"; };
@@ -40,11 +44,13 @@
 		C81155A28EAA4D4AB7BB7D00 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		C8115858374D5FF91C05EB96 /* DataCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCollection.h; sourceTree = "<group>"; };
 		C8115931BFD5FAFE57205C0F /* LIFOCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFOCollection.h; sourceTree = "<group>"; };
+		C8115943573BC3C1033AD54F /* TreeCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeCollection.h; sourceTree = "<group>"; };
 		C8115AD0C209826FBE122AFD /* FIFOCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFOCollection.m; sourceTree = "<group>"; };
 		C8115AF9B921FEFAF35C2B34 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		C8115BADC006FA42AA2BE0B3 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		C8115BD494631A6879EFE7F5 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		C8115C21DE120449DEEC0930 /* DoublyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublyLinkedList.h; sourceTree = "<group>"; };
+		C8115C65A9BEB8FB9C499144 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		C8115CEDDE22FC107CA5FC83 /* PerformanceTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceTimer.m; sourceTree = "<group>"; };
 		C8115E49A2737DF7F6BBB094 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		C8115E664B51818BFE89F2F8 /* FIFOCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOCollection.h; sourceTree = "<group>"; };
@@ -82,6 +88,10 @@
 				C81152872FDBC2AF62EDDF2B /* Queue.h */,
 				C8115E664B51818BFE89F2F8 /* FIFOCollection.h */,
 				C8115AD0C209826FBE122AFD /* FIFOCollection.m */,
+				C81151E8F402DF262D5DC126 /* BinaryTree.m */,
+				C8115C65A9BEB8FB9C499144 /* BinaryTree.h */,
+				C8115943573BC3C1033AD54F /* TreeCollection.h */,
+				C81152E45327B02D452FACA5 /* TreeCollection.m */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -161,6 +171,8 @@
 				C8115D49D7FD37407F600E4A /* DoublyLinkedList.m in Sources */,
 				C8115F18CF03088D9D5D2E81 /* Queue.m in Sources */,
 				C81154E1883115F4BDCFE8AB /* FIFOCollection.m in Sources */,
+				C8115A6471D8684259A66AFE /* BinaryTree.m in Sources */,
+				C81158A9B282D6249597C378 /* TreeCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
