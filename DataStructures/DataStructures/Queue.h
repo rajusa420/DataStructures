@@ -17,9 +17,9 @@
 - (instancetype) init;
 - (instancetype) initWithCollection: (NSObject<DataCollection>*) collectionObject;
 
-- (void) push: (id) object;
-- (id) pop;
-- (id) peek;
+- (void) push: (NSObject*) object;
+- (NSObject*) pop;
+- (NSObject*) peek;
 - (void) removeAllObjects;
 - (NSUInteger) count;
 

@@ -25,17 +25,17 @@
     return self;
 }
 
-- (void) push: (id) object
+- (void) push: (NSObject*) object
 {
     [queue_ addObject: object];
 }
 
-- (id) pop
+- (NSObject*) pop
 {
     return [queue_ removeFirstObject];
 }
 
-- (id) peek
+- (NSObject*) peek
 {
     return [queue_ getFirstObject];
 }

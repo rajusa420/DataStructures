@@ -13,7 +13,7 @@
     LinkedListNode* next_;
 }
 
-@property (atomic, retain) id data;
+@property (atomic, retain) NSObject* data;
 @property (atomic, retain) LinkedListNode* next;
 @end
 
@@ -26,14 +26,14 @@
 }
 - (instancetype)init;
 
-- (void)addObject: (id) object;
-- (id)removeFirstObject;
-- (id)removeObject: (id) object;
-- (id)removeLastObject;
+- (void)addObject: (NSObject*) object;
+- (NSObject*)removeFirstObject;
+- (NSObject*)removeObject: (NSObject*) object;
+- (NSObject*)removeLastObject;
 - (void)removeAllObjects;
-- (BOOL)contains: (id) object;
-- (id)getFirstObject;
-- (id)getLastObject;
+- (BOOL)contains: (NSObject*) object;
+- (NSObject*)getFirstObject;
+- (NSObject*)getLastObject;
 
 - (void)printAllObjectsWithDataType: (Class) dataType;
 

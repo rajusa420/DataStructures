@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C81150369375DB8AC8050168 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115BD494631A6879EFE7F5 /* LinkedList.m */; };
+		C811519C4C81F5850E667BDC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81151C45D93F4204839CAAF /* LinkedList.swift */; };
 		C81151FE917CEC35A0991300 /* LIFOCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C81154D4CD6E688211FA9186 /* LIFOCollection.m */; };
 		C811536A609111A682C3BEA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C811550A3FC52E5334633AA7 /* main.m */; };
 		C81154E1883115F4BDCFE8AB /* FIFOCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C8115AD0C209826FBE122AFD /* FIFOCollection.m */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1EBF57D521EBE47C001E18DD /* DataStructures-Bridge-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataStructures-Bridge-Swift.h"; sourceTree = "<group>"; };
+		C81151C45D93F4204839CAAF /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		C81151E8F402DF262D5DC126 /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		C81152872FDBC2AF62EDDF2B /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		C81152E45327B02D452FACA5 /* TreeCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeCollection.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				C8115C65A9BEB8FB9C499144 /* BinaryTree.h */,
 				C8115943573BC3C1033AD54F /* TreeCollection.h */,
 				C81152E45327B02D452FACA5 /* TreeCollection.m */,
+				C81151C45D93F4204839CAAF /* LinkedList.swift */,
+				1EBF57D521EBE47C001E18DD /* DataStructures-Bridge-Swift.h */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				C81154E1883115F4BDCFE8AB /* FIFOCollection.m in Sources */,
 				C8115A6471D8684259A66AFE /* BinaryTree.m in Sources */,
 				C81158A9B282D6249597C378 /* TreeCollection.m in Sources */,
+				C811519C4C81F5850E667BDC /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +188,10 @@
 		C81155B3321CABB6CEEB16DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DataStructures/DataStructures-Bridge-Swift.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -268,7 +277,10 @@
 		C8115EC1F1A0E9512F2C6E09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DataStructures/DataStructures-Bridge-Swift.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -291,6 +303,7 @@
 				C81155B3321CABB6CEEB16DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

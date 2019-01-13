@@ -7,16 +7,16 @@
 
 @protocol DataCollection <NSObject>
 @required
-- (void)addObject: (id) object;
-- (id)removeFirstObject;
-- (id)removeObject: (id) object;
-- (id)removeLastObject;
+- (void)addObject: (NSObject*) object;
+- (NSObject*)removeFirstObject;
+- (NSObject*)removeObject: (NSObject*) object;
+- (NSObject*)removeLastObject;
 - (void)removeAllObjects;
-- (BOOL)contains: (id) object;
+- (BOOL)contains: (NSObject*) object;
 - (NSUInteger) count;
-- (id)getFirstObject;
-- (id)getLastObject;
-- (id)getObjectAtIndex: (NSUInteger) index;
+- (NSObject*)getFirstObject;
+- (NSObject*)getLastObject;
+- (NSObject*)getObjectAtIndex: (NSUInteger) index;
 @end
 
 @protocol DataCollectionDebug <NSObject>

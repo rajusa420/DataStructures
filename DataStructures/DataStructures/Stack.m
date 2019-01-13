@@ -29,15 +29,15 @@
     return self;
 }
 
-- (void) push: (id) object
+- (void) push: (NSObject*) object
 {
     [stack_ addObject: object];
 }
-- (id) pop
+- (NSObject*) pop
 {
     return [stack_ removeLastObject];
 }
-- (id) peek
+- (NSObject*) peek
 {
     return [stack_ getLastObject];
 }

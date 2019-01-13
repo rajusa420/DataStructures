@@ -30,7 +30,7 @@
 
 @synthesize count = count_;
 
-- (void) addObject: (id) object
+- (void) addObject: (NSObject*) object
 {
     LinkedListNode* newNode = [[LinkedListNode alloc] init];
     newNode.data = object;
@@ -45,7 +45,7 @@
     count_++;
 }
 
-- (id) removeFirstObject
+- (NSObject*) removeFirstObject
 {
     if (!head_)
         return nil;
@@ -59,7 +59,7 @@
     return node.data;
 }
 
-- (id) removeLastObject
+- (NSObject*) removeLastObject
 {
     if (!head_)
         return nil;
@@ -89,7 +89,7 @@
     return nil;
 }
 
-- (id) removeObject: (id) object
+- (NSObject*) removeObject: (NSObject*) object
 {
     if (!head_)
         return nil;
@@ -139,7 +139,7 @@
     count_ = 0;
 }
 
-- (BOOL) contains: (id) object
+- (BOOL) contains: (NSObject*) object
 {
     if (!head_)
         return NO;
@@ -156,7 +156,7 @@
     return NO;
 }
 
-- (id) getFirstObject
+- (NSObject*) getFirstObject
 {
     if (head_)
         return head_.data;
@@ -164,7 +164,7 @@
     return nil;
 }
 
-- (id) getLastObject
+- (NSObject*) getLastObject
 {
     if (tail_)
         return tail_.data;
@@ -172,7 +172,7 @@
     return nil;
 }
 
-- (id) getObjectAtIndex: (NSUInteger) index
+- (NSObject*) getObjectAtIndex: (NSUInteger) index
 {
     if (!head_)
         return nil;

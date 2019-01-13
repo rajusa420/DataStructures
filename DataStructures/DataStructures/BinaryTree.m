@@ -61,7 +61,6 @@
 
 - (void) removeObject: (id) data
 {
-    BinaryTreeNode* current = root_;
 
 }
 

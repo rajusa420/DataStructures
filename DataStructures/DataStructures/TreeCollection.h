@@ -7,9 +7,9 @@
 
 @protocol TreeCollection <NSObject>
 @required
-- (void)addObject: (id) data;
-- (void)removeObject: (id) data;
-- (BOOL)contains: (id) data;
+- (void)addObject: (NSObject*) data;
+- (void)removeObject: (NSObject*) data;
+- (BOOL)contains: (NSObject*) data;
 @end
 
 @protocol TreeCollectionDebug <NSObject>

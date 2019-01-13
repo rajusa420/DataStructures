@@ -12,25 +12,27 @@
 #import "DoublyLinkedList.h"
 #import "Queue.h"
 #import "BinaryTree.h"
+#import <DataStructures-Swift.h>
 
 int main(int argc, const char * argv[])
 {
     NSLog(@"Test");
     @autoreleasepool
     {
-        //LinkedList* linkedList = [[LinkedList alloc] init];
-        //DoublyLinkedList* doublyLinkedList = [[DoublyLinkedList alloc] init];
-        //[DataCollectionTest dataCollectionAddRemoveTests: doublyLinkedList];
-        // [DataCollectionTest dataCollectionReturnObjectTest: doublyLinkedList];
-        // [DataCollectionTest basicDataCollectionTest: doublyLinkedList];
+        // LinkedList* linkedList = [[LinkedList alloc] init];
+        // DoublyLinkedList* doublyLinkedList = [[DoublyLinkedList alloc] init];
+        SwLinkedList* swLinkedList = [[SwLinkedList alloc] init];
+        [DataCollectionTest dataCollectionAddRemoveTests: swLinkedList];
+        [DataCollectionTest dataCollectionReturnObjectTest: swLinkedList];
+        [DataCollectionTest basicDataCollectionTest: swLinkedList];
 
         //Stack* stack = [[Stack alloc] initWithCollection: doublyLinkedList];
         //[LIFOCollectionTests LIFOCollectionPushPopTest: stack];
 
         // Queue* queue = [[Queue alloc] initWithCollection: linkedList];
         // [FIFOCollectionTests FIFOCollectionPushPopTest: queue];
-        BinaryTree* binaryTree = [[BinaryTree alloc] init];
-        [TreeCollectionTests addRemoveTest: binaryTree];
+        // BinaryTree* binaryTree = [[BinaryTree alloc] init];
+        // [TreeCollectionTests addRemoveTest: binaryTree];
     }
 
     return 0;
