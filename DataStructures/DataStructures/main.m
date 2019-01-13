@@ -19,12 +19,16 @@ int main(int argc, const char * argv[])
     NSLog(@"Test");
     @autoreleasepool
     {
-        // LinkedList* linkedList = [[LinkedList alloc] init];
-        // DoublyLinkedList* doublyLinkedList = [[DoublyLinkedList alloc] init];
+        LinkedList* linkedList = [[LinkedList alloc] init];
+        DoublyLinkedList* doublyLinkedList = [[DoublyLinkedList alloc] init];
         SwLinkedList* swLinkedList = [[SwLinkedList alloc] init];
+        [DataCollectionTest dataCollectionAddRemoveTests: linkedList];
+        [DataCollectionTest dataCollectionReturnObjectTest: linkedList];
+        [DataCollectionTest dataCollectionAddRemoveTests: doublyLinkedList];
+        [DataCollectionTest dataCollectionReturnObjectTest: doublyLinkedList];
         [DataCollectionTest dataCollectionAddRemoveTests: swLinkedList];
         [DataCollectionTest dataCollectionReturnObjectTest: swLinkedList];
-        [DataCollectionTest basicDataCollectionTest: swLinkedList];
+        //[DataCollectionTest basicDataCollectionTest: swLinkedList];
 
         //Stack* stack = [[Stack alloc] initWithCollection: doublyLinkedList];
         //[LIFOCollectionTests LIFOCollectionPushPopTest: stack];

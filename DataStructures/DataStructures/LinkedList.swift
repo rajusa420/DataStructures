@@ -7,7 +7,7 @@ import Foundation
 
 class SwLinkedListNode
 {
-    var data: NSObject;
+    var data: NSObject?;
     fileprivate var next: SwLinkedListNode?;
 
     init(data: NSObject) {
@@ -67,31 +67,134 @@ public class SwLinkedList : NSObject, DataCollection, DataCollectionDebug
     }
 
     public func removeLastObject() -> NSObject? {
+        guard let head = self.head else {
+            return nil;
+        }
+
+        var current : SwLinkedListNode? = head;
+        if let tail = self.tail {
+            if tail === head {
+                self.head = nil;
+                self.tail = nil;
+                self.nodeCount = 0;
+                return current!.data;
+            }
+        }
+
+        while current != nil {
+            if (current!.next === self.tail) {
+                let lastNode : SwLinkedListNode? = current!.next;
+                current!.next = nil;
+                self.tail = current;
+                self.nodeCount -= 1;
+                return lastNode!.data;
+            }
+
+            current = current!.next;
+        }
+
         return nil;
     }
 
     public func remove(_ object: NSObject!) -> NSObject! {
-        return object;
+        guard let head = self.head else {
+            return nil;
+        }
+
+        var previous : SwLinkedListNode? = nil;
+        var current : SwLinkedListNode? = head;
+        while current != nil {
+            if (current!.data == object)
+            {
+                if head === current {
+                    self.head = current!.next;
+                }
+
+                if self.tail === current {
+                    self.tail = previous;
+                }
+
+                if previous != nil {
+                    previous!.next = current!.next;
+                }
+                return current!.data;
+            }
+
+            previous = current;
+            current = current!.next;
+        }
+        return nil;
     }
 
     public func removeAllObjects()
     {
+        guard let head = self.head else {
+            return;
+        }
 
+        // Note: We need to go through and release one object at a time
+        // else we get a stack overflow
+        var current : SwLinkedListNode? = head;
+        while current != nil {
+            let next: SwLinkedListNode? = current!.next;
+            current!.data = nil;
+            current!.next = nil;
+            current = next;
+        }
+
+        self.head = nil;
+        self.tail = nil;
+        self.nodeCount = 0;
     }
 
     public func contains(_ object: NSObject) -> Bool {
+        guard let head = self.head else {
+            return false;
+        }
+
+        var current : SwLinkedListNode? = head;
+        while current != nil {
+            if (current!.data == object) {
+                return true;
+            }
+
+            current = current!.next;
+        }
         return false;
     }
 
     public func getFirstObject() -> NSObject? {
-        return nil;
+        guard let head = self.head else {
+            return nil;
+        }
+
+        return head.data;
     }
 
     public func getLastObject() -> NSObject? {
-        return nil;
+        guard let tail = self.tail else {
+            return nil;
+        }
+
+        return tail.data;
     }
 
     public func getObjectAt(_ index: UInt) -> NSObject? {
+        guard let head = self.head else {
+            return nil;
+        }
+
+        var current : SwLinkedListNode? = head;
+        var position : UInt = 0;
+        while current != nil {
+            if (position == index) {
+                return current!.data;
+            }
+
+            position += 1;
+            current = current!.next;
+        }
+
         return nil;
     }
 
