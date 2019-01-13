@@ -1,22 +1,22 @@
 # DataStructures
 
-2019-01-13 18:34:00.029623-0500 DataStructures[35824:4751891] LinkedList
-2019-01-13 18:34:00.596053-0500 DataStructures[35824:4751891] Add 1,000,000 items: 563.86 ms
-2019-01-13 18:34:01.796021-0500 DataStructures[35824:4751891] Remove all 1,000,000 items: 415.76 ms
-2019-01-13 18:34:02.116834-0500 DataStructures[35824:4751891] Remove middle item: 49.03 ms
-2019-01-13 18:34:02.819588-0500 DataStructures[35824:4751891] Contains middle item: 48.84 ms
-2019-01-13 18:34:03.487403-0500 DataStructures[35824:4751891] Get middle item: 29.00 ms
+LinkedList
+Add 1,000,000 items: 563.86 ms
+Remove all 1,000,000 items: 415.76 ms
+Remove middle item: 49.03 ms
+Contains middle item: 48.84 ms
+Get middle item: 29.00 ms
 
-2019-01-13 18:34:03.882303-0500 DataStructures[35824:4751891] DoublyLinkedList
-2019-01-13 18:34:04.241567-0500 DataStructures[35824:4751891] Add 1,000,000 items: 358.98 ms
-2019-01-13 18:34:05.409122-0500 DataStructures[35824:4751891] Remove all 1,000,000 items: 367.08 ms
-2019-01-13 18:34:05.804056-0500 DataStructures[35824:4751891] Remove middle item: 35.74 ms
-2019-01-13 18:34:06.475800-0500 DataStructures[35824:4751891] Contains middle item: 34.43 ms
-2019-01-13 18:34:07.240537-0500 DataStructures[35824:4751891] Get middle item: 22.38 ms
+DoublyLinkedList
+Add 1,000,000 items: 358.98 ms
+Remove all 1,000,000 items: 367.08 ms
+Remove middle item: 35.74 ms
+Contains middle item: 34.43 ms
+Get middle item: 22.38 ms
 
-2019-01-13 18:34:07.601714-0500 DataStructures[35824:4751891] DataStructures.SwLinkedList
-2019-01-13 18:34:07.842250-0500 DataStructures[35824:4751891] Add 1,000,000 items: 240.35 ms
-2019-01-13 18:34:08.550424-0500 DataStructures[35824:4751891] Remove all 1,000,000 items: 218.44 ms
-2019-01-13 18:34:08.840285-0500 DataStructures[35824:4751891] Remove middle item: 63.75 ms
-2019-01-13 18:34:09.413234-0500 DataStructures[35824:4751891] Contains middle item: 46.17 ms
-2019-01-13 18:34:10.142686-0500 DataStructures[35824:4751891] Get middle item: 10.54 ms
+DataStructures.SwLinkedList
+Add 1,000,000 items: 240.35 ms
+Remove all 1,000,000 items: 218.44 ms
+Remove middle item: 63.75 ms
+Contains middle item: 46.17 ms
+Get middle item: 10.54 ms
